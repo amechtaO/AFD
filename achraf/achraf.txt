@@ -1,1 +1,1 @@
-content from git to jira Mate
+synchronisation Jira et Git
