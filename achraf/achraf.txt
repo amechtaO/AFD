@@ -1,1 +1,1 @@
-synchronisation Jira et Git with button Git in Jira
+synchronisation Jira et Git with button Git in Jira with refresh
