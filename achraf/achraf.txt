@@ -1,4 +1,4 @@
-Feature: Creation de une action
+Feature: Creation de une action2
 
   Scenario Outline: Creation de un evenement
 
