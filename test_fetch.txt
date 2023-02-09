@@ -1,1 +1,1 @@
-from jira to git with description changed test
+ modifed gherkin manuel
