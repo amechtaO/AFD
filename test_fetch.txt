@@ -1,1 +1,1 @@
-ajouter un nouveau fichier
+from jira to git
