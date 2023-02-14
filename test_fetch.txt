@@ -1,2 +1,93 @@
-ajouter un nouveau fichier par achraf mechta
+Feature: Modifier un evenement
 
+  Scenario Outline: Modifier un evenement
+
+    Given une base de donnees ne contenant aucun Evenement existe
+    And un Evenement1 avec les informations suivantes existe
+      | idEvenement         | titleEvenement         | startDateEvenement         | endDateEvenement         | locationEvenement         | regionEvenement         | categoryEvenement         | flagEvenement         | stateEvenement         | publicationStateEvenement         | nbOfPlacesEvenement         | nbMinOfParticipantEvenement         | descriptionEvenement         | deleteReasonEvenement         |
+      | <valueIdEvenement1> | <valueTitleEvenement1> | <valueStartDateEvenement1> | <valueEndDateEvenement1> | <valueLocationEvenement1> | <valueRegionEvenement1> | <valueCategoryEvenement1> | <valueFlagEvenement1> | <valueStateEvenement1> | <valuePublicationStateEvenement1> | <valueNbOfPlacesEvenement1> | <valueNbMinOfParticipantEvenement1> | <valueDescriptionEvenement1> | <valueDeleteReasonEvenement1> |
+    And une Photo1 avec les informations suivantes existe
+      | pathPhoto         | idPhoto         |
+      | <valuePathPhoto1> | <valueIdPhoto1> |
+    And la Photo1 existe dans Evenement1
+    And une liste1 vide de Organisateurs existe
+    And un Organisateur1 avec les informations suivantes existe
+      | lastNameOrganisateur         | firstNameOrganisateur         | emailOrganisateur         | roleOrganisateur         |
+      | <valueLastNameOrganisateur1> | <valueFirstNameOrganisateur1> | <valueEmailOrganisateur1> | <valueRoleOrganisateur1> |
+    And la liste1 de Organisateurs contient Organisateur1
+    And la liste1 de Organisateurs existe dans Evenement1
+    And un EventCreator1 avec les informations suivantes existe
+      | lastNameEventcreator         | firstNameEventcreator         | emailEventcreator         | roleEventCreator         |
+      | <valueLastNameEventCreator1> | <valueFirstNameEventCreator1> | <valueEmailEventCreator1> | <valueRoleEventCreator1> |
+    And le EventCreator1 existe dans Evenement1
+    And un Collaborateur1 avec les informations suivantes existe
+      | lastNameCollaborateur         | firstNameCollaborateur         | emailCollaborateur         | roleCollaborateur         |
+      | <valueLastNameCollaborateur1> | <valueFirstNameCollaborateur1> | <valueEmailCollaborateur1> | <valueRoleCollaborateur1> |
+    And une Reaction1 avec les informations suivantes existe
+      | feelingReaction         |
+      | <valueFeelingReaction1> |
+    And le Collaborateur1 existe dans Reaction1
+    And la liste2 vide de Reactions existe
+    And la liste2 de Reactions contient Reaction1
+    And la liste2 de Reactions existe dans Evenement1
+    And une liste3 vide de Photos post event existe
+    And la liste3 de Photos post event existe dans Evenement1
+    And un Participant1 avec les informations suivantes existe
+      | lastNameParticipant         | firstNameParticipant         | emailParticipant         | roleParticipant         |
+      | <valueLastNameParticipant1> | <valueFirstNameParticipant1> | <valueEmailParticipant1> | <valueRoleParticipant1> |
+    And une liste4 vide de Participants existe
+    And la liste4 de Participants contient le Participant1
+    And la liste4 de Participants existe dans Evenement1
+    And le Evenement1 existe en base de donnees
+
+    And un Evenement2 avec les informations suivantes existe
+      | idEvenement         | titleEvenement         | startDateEvenement         | endDateEvenement         | locationEvenement         | regionEvenement         | categoryEvenement         | flagEvenement         | stateEvenement         | publicationStateEvenement         | nbOfPlacesEvenement         | nbMinOfParticipantEvenement         | descriptionEvenement         | deleteReasonEvenement         |
+      | <valueIdEvenement2> | <valueTitleEvenement2> | <valueStartDateEvenement2> | <valueEndDateEvenement2> | <valueLocationEvenement2> | <valueRegionEvenement2> | <valueCategoryEvenement2> | <valueFlagEvenement2> | <valueStateEvenement2> | <valuePublicationStateEvenement2> | <valueNbOfPlacesEvenement2> | <valueNbMinOfParticipantEvenement2> | <valueDescriptionEvenement2> | <valueDeleteReasonEvenement2> |
+    And une Photo2 avec les informations suivantes existe
+      | pathPhoto         | idPhoto         |
+      | <valuePathPhoto2> | <valueIdPhoto2> |
+    And une liste5 vide de Organisateurs existe
+    And un Organisateur2 avec les informations suivantes existe
+      | lastNameOrganisateur         | firstNameOrganisateur         | emailOrganisateur         | roleOrganisateur         |
+      | <valueLastNameOrganisateur2> | <valueFirstNameOrganisateur2> | <valueEmailOrganisateur2> | <valueRoleOrganisateur2> |
+    And la liste5 de Organisateurs contient Organisateur2
+    And la liste5 de Organisateurs existe dans Evenement2
+    And un EventCreator2 avec les informations suivantes existe
+      | lastNameEventcreator         | firstNameEventcreator         | emailEventcreator         | roleEventCreator         |
+      | <valueLastNameEventCreator2> | <valueFirstNameEventCreator2> | <valueEmailEventCreator2> | <valueRoleEventCreator2> |
+    And le EventCreator2 existe dans Evenement2
+    And un Collaborateur2 avec les informations suivantes existe
+      | lastNameCollaborateur         | firstNameCollaborateur         | emailCollaborateur         | roleCollaborateur         |
+      | <valueLastNameCollaborateur2> | <valueFirstNameCollaborateur2> | <valueEmailCollaborateur2> | <valueRoleCollaborateur2> |
+    And une Reaction2 avec les informations suivantes existe
+      | feelingReaction         |
+      | <valueFeelingReaction2> |
+    And le Collaborateur2 existe dans Reaction2
+    And la liste6 vide de Reactions existe
+    And la liste6 de Reactions contient Reaction2
+    And la liste6 de Reactions existe dans Evenement2
+    And une liste7 vide de Photos post event existe
+    And la liste7 de Photos post event existe dans Evenement2
+    And un Participant2 avec les informations suivantes existe
+      | lastNameParticipant         | firstNameParticipant         | emailParticipant         | roleParticipant         |
+      | <valueLastNameParticipant2> | <valueFirstNameParticipant2> | <valueEmailParticipant2> | <valueRoleParticipant2> |
+    And une liste8 vide de Participants existe
+    And la liste8 de Participants contient le Participant2
+    And la liste8 de Participants existe dans Evenement2
+
+    And un Evenement3 avec les informations suivantes existe
+      | idEvenement         | titleEvenement         | startDateEvenement         | endDateEvenement         | locationEvenement         | regionEvenement         | categoryEvenement         | flagEvenement         | stateEvenement         | publicationStateEvenement         | nbOfPlacesEvenement         | nbMinOfParticipantEvenement         | descriptionEvenement         | deleteReasonEvenement         |
+      | <valueIdEvenement3> | <valueTitleEvenement3> | <valueStartDateEvenement3> | <valueEndDateEvenement3> | <valueLocationEvenement3> | <valueRegionEvenement3> | <valueCategoryEvenement3> | <valueFlagEvenement3> | <valueStateEvenement3> | <valuePublicationStateEvenement3> | <valueNbOfPlacesEvenement3> | <valueNbMinOfParticipantEvenement3> | <valueDescriptionEvenement3> | <valueDeleteReasonEvenement3> |
+
+    And un Utilisateur1 avec les informations suivantes existe
+      | lastNameUtilisateur         | firstNameUtilisateur         | emailUtilisateur         | roleUtilisateur         |
+      | <valueLastNameUtilisateur1> | <valueFirstNameUtilisateur1> | <valueEmailUtilisateur1> | <valueRoleUtilisateur1> |
+
+    When le Evenement3 est modifie par Utilisateur1
+    Then le Evenement renvoye possede les memes informations que Evenement2
+    And un Schema ne est pas envoye
+
+    Examples:
+
+      | valueUseCaseSchema | valueLastNameUtilisateur1 | valueFirstNameUtilisateur1 | valueEmailUtilisateur1 | valueRoleUtilisateur1 | valueIdEvenement3 | valueTitleEvenement3 | valueStartDateEvenement3 | valueEndDateEvenement3 | valueLocationEvenement3 | valueRegionEvenement3 | valueCategoryEvenement3 | valueFlagEvenement3 | valueStateEvenement3 | valuePublicationStateEvenement3 | valueNbOfPlacesEvenement3 | valueNbMinOfParticipantEvenement3 | valueDescriptionEvenement3 | valueDeleteReasonEvenement3 | valueIdEvenement1 | valueTitleEvenement1 | valueStartDateEvenement1 | valueEndDateEvenement1 | valueLocationEvenement1 | valueRegionEvenement1 | valueCategoryEvenement1 | valueFlagEvenement1 | valueStateEvenement1 | valuePublicationStateEvenement1 | valueNbOfPlacesEvenement1 | valueNbMinOfParticipantEvenement1 | valueDescriptionEvenement1 | valueDeleteReasonEvenement1 | valuePathPhoto1 | valueIdPhoto1 | valueLastNameOrganisateur1 | valueFirstNameOrganisateur1 | valueEmailOrganisateur1        | valueRoleOrganisateur1 | valueLastNameOrganisateur2 | valueFirstNameOrganisateur2 | valueEmailOrganisateur2        | valueRoleOrganisateur2 | valueLastNameEventCreator1 | valueFirstNameEventCreator1 | valueEmailEventCreator1        | valueRoleEventCreator1 | valueLastNameCollaborateur1 | valueFirstNameCollaborateur1 | valueEmailCollaborateur1        | valueRoleCollaborateur1 | valueFeelingReaction1 | valueLastNameParticipant1 | valueFirstNameParticipant1 | valueEmailParticipant1        | valueRoleParticipant1 | valueIdEvenement2 | valueTitleEvenement2 | valueStartDateEvenement2 | valueEndDateEvenement2 | valueLocationEvenement2 | valueRegionEvenement2 | valueCategoryEvenement2 | valueFlagEvenement2 | valueStateEvenement2 | valuePublicationStateEvenement2 | valueNbOfPlacesEvenement2 | valueNbMinOfParticipantEvenement2 | valueDescriptionEvenement2 | valueDeleteReasonEvenement2 | valuePathPhoto2 | valueIdPhoto2 | valueLastNameEventCreator2 | valueFirstNameEventCreator2 | valueEmailEventCreator2        | valueRoleEventCreator2 | valueLastNameCollaborateur2 | valueFirstNameCollaborateur2 | valueEmailCollaborateur2        | valueRoleCollaborateur2 | valueFeelingReaction2 | valueLastNameParticipant2 | valueFirstNameParticipant2 | valueEmailParticipant2        | valueRoleParticipant2 |
+      | Modification       | frances                   | damien                     | dfrances@afdtech.com   | ADMIN                 | 6256Zzgd6735      | titleEvenement2      | 2023-04-18T13:10:28Z     | 2023-04-18T13:10:28Z   | locationEvenement1      |                       |                         |                     |                      |                                 | 10                        | 1                                 | valueDescriptionEvenement1 |                             | 6256Zzgd6735      | titleEvenement1      | 2023-04-18T13:10:28Z     | 2023-04-18T13:10:28Z   | locationEvenement1      | ALL                   | LINKERS                 | NONE                | INPROGRESS           | VALIDATED                       | 10                        | 1                                 | valueDescriptionEvenement1 | NONE                        | path/photo      | 1452727jzdh8  | lastNameOrganisateur1      | firstNameOrganisateur1      | emailOrganisateur1@afdtech.com | ADMIN                  | lastNameOrganisateur1      | firstNameOrganisateur1      | emailOrganisateur1@afdtech.com | ADMIN                  | lastNameEventcreator1      | firstNameEventcreator1      | emailEventcreator1@afdtech.com | ADMIN                  | lastNameCollaborateur1      | firstNameCollaborateur1      | emailCollaborateur1@afdtech.com | ADMIN                   | LOVE                  | lastNameParticipant1      | firstNameParticipant1      | emailParticipant1@afdtech.com | ADMIN                 | 6256Zzgd6735      | titleEvenement2      | 2023-04-18T13:10:28Z     | 2023-04-18T13:10:28Z   | locationEvenement1      | ALL                   | LINKERS                 | NONE                | INPROGRESS           | VALIDATED                       | 10                        | 1                                 | valueDescriptionEvenement1 | NONE                        | path/photo      | 1452727jzdh8  | lastNameEventcreator1      | firstNameEventcreator1      | emailEventcreator1@afdtech.com | ADMIN                  | lastNameCollaborateur1      | firstNameCollaborateur1      | emailCollaborateur1@afdtech.com | ADMIN                   | LOVE                  | lastNameParticipant1      | firstNameParticipant1      | emailParticipant1@afdtech.com | ADMIN                 |
