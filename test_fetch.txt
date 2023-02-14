@@ -1,4 +1,4 @@
-Feature: Modifier un evenement par achraf
+Feature: Modifier un evenement
 
   Scenario Outline: Modifier un evenement
 
